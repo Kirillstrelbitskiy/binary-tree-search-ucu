@@ -416,7 +416,7 @@ class LinkedBST(AbstractCollection):
             sys.setrecursionlimit(len(words_list) + 5)
 
             random_words = []
-            while len(random_words) < 1000:
+            while len(random_words) < 10000:
                 word = random.choice(words_list)
 
                 if word not in random_words:
@@ -434,15 +434,16 @@ class LinkedBST(AbstractCollection):
             print(
                 f"Time of search in List is {round(end_time - start_time, 2)}s")
 
-            # start_time = time.time()
+            start_time = time.time()
 
-            # for word in random_words:
-            #     if self.find(word):
-            #         continue
+            for word in random_words:
+                if self.find(word):
+                    continue
 
-            # end_time = time.time()
+            end_time = time.time()
 
-            # print(f"Time of search in List is {round(end_time - start_time, 2)}s")
+            print(
+                f"Time of search in List is {round(end_time - start_time, 2)}s")
 
             # testing search in shufled binary-search tree
 
